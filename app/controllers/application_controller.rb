@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
-
+  before_action :authenticate_user!
   before_action :configure_permitted_parameters, if :deivse_controller?
   #devise利用の機能（ユーザ登録、ログイン認証など）が使われる場合、その前にconfigure_permitted_parametersが実行されます。
  protected
